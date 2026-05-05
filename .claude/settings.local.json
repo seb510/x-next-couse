@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Recurse -Force node_modules, package-lock.json -ErrorAction SilentlyContinue)",
+      "PowerShell($pkg = Get-Content \"D:\\\\Web-Front\\\\x-next-course\\\\node_modules\\\\@tailwindcss\\\\oxide\\\\package.json\" | ConvertFrom-Json; Write-Host \"version: $\\($pkg.version\\)\"; $pkg.optionalDependencies)",
+      "PowerShell(Test-Path \"D:\\\\Web-Front\\\\x-next-course\\\\node_modules\\\\@tailwindcss\\\\oxide\\\\node_modules\"; node -e \"require\\('@tailwindcss/oxide'\\)\" 2>&1)"
+    ]
+  }
+}
