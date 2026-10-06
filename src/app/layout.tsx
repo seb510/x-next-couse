@@ -9,8 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "X App",
-  description: "Front-end developer styled lik X.com",
+  title: {
+    template: "%s · X",
+    default: "X App",
+  },
+  description: "A front-end X.com clone built with Next.js",
 };
 
 export default function RootLayout({
@@ -19,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased dark`}>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

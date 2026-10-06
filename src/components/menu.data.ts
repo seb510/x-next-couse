@@ -1,11 +1,12 @@
+import type { Route } from "next";
 import {PAGES} from "@/config/pages.config";
 
 export interface IMenuItem {
-    href: string;
+    href: Route;
     name: string;
 }
 
-export const MENU = [
+export const MENU: IMenuItem[] = [
     {
         href: PAGES.HOME,
         name: 'Home',
